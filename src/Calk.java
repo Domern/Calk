@@ -31,9 +31,12 @@ public class Calk {
     }
 
     private void init(){
-        System.out.println("Введите выражение");
+        System.out.println("Введите выражение, используя пробелы");
         String inFormula=scanner.nextLine();
         String[] str=inFormula.split(" ");
+        if(str.length>3){
+            throw new RuntimeException("Формат математической операции не удовлетворяет заданию");
+        }
         String a1;
         String b1;
         boolean good1=false;
